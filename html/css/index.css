@@ -359,7 +359,7 @@ nav img{
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  margin-left: 30px;
+  margin-left: 30px;;
 }
 
 .footmain .footmainsecond{
@@ -400,6 +400,17 @@ nav img{
   align-items: center;
   justify-content: center;
   gap: 30px;
+  margin-bottom: 8px;
+}
+
+.footend{
+  display: flex;
+  justify-content: center;
+}
+
+.footend img{
+  width: 100px;
+  height: auto;
 }
 
 @media (max-width: 768px) {
@@ -423,14 +434,19 @@ nav img{
     height: 30%;
   }
 
+  .subscribe{
+    margin-bottom: 150px;
+  }
+
   .footmain{
     display: flex;
     flex-direction: column;
+    margin-top: 40px;
   }
 
   .footmain .footmainfirst{
     height: 10vh;
-    width: 80%;
+    width: 88%;
     align-items: start;
   }
 
@@ -444,5 +460,19 @@ nav img{
     height: 10vh;
     width: 80%;
     align-items: start;    
+  }
+
+  .footbody{
+    margin-top: 150px;
+  }
+
+  .sidecontent{
+    margin-top: 50px;
+  }
+}
+
+@media (max-width : 375px) {
+  .sidecontent{
+    margin-top: 70px;
   }
 }
