@@ -409,8 +409,8 @@ nav img{
 }
 
 .footend img{
-  width: 100px;
-  height: auto;
+  width: 150px;
+  height: 100px;
 }
 
 @media (max-width: 768px) {
