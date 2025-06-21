@@ -468,8 +468,16 @@ nav img{
 
   .sidecontent{
     margin-top: 50px;
+    overflow-wrap: break-word;
   }
+
+  .space{
+    margin: 40px;
+    padding: 40px;
+  }
+
 }
+
 
 @media (max-width : 375px) {
   .sidecontent{
