@@ -3,6 +3,33 @@
     margin: 0;
 }
 
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: #ccc;
+}
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 40s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
 nav {
   top: 0;
   left: 0;
@@ -17,6 +44,24 @@ nav {
 
 .nav-items a:hover{
   transform: scale(1.1);
+}
+
+.shop-div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-family: ital;
+  cursor: pointer;
+}
+
+.shop-div p{
+  font-size: 15px;
+  font-family: ital;
+  font-weight: 600;
+  font-size: larger;
+  margin: auto;
 }
 
 .logo {
@@ -52,20 +97,15 @@ nav img{
   width: 210px;
 }
 
-.anime-nav{
-  margin-top: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 2px 10px;
-  background-color: gray;
-  white-space: nowrap;
-  overflow-x: auto;
-  gap: 20px;
+.main-head{
+  margin-top: 50px;
+  width: 100vw;
+  text-align: center;
 }
 
-.anime-nav a{
-  text-decoration: none;
-  color: white;
-  flex-shrink: 0;
+.main-head .productstag{
+  font-size: 35px;
+  font-family: ital;
 }
+
+
