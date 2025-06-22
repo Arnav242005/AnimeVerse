@@ -1,6 +1,6 @@
 *{
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .marquee {
@@ -108,4 +108,66 @@ nav img{
   font-family: ital;
 }
 
+.product-container{
+  height: 100vh;
+  width: 100%;
+}
 
+.product-container img{
+  height: auto;
+  width: 100%;
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Hidden off screen */
+  width: 280px;
+  height: 100%;
+  background: white;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transition: left 0.3s ease;
+  padding: 20px;
+}
+
+/* Show sidebar */
+#sidebar.active {
+  left: 0;
+}
+
+/* Sidebar header */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Close icon */
+#close-sidebar {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Hamburger icon */
+#hamburger {
+  cursor: pointer;
+  font-size: 24px;
+  margin: 10px;
+  z-index: 1000;
+}
+
+/* Sidebar links */
+.sidebar-links {
+  list-style: none;
+  padding: 20px 0 0 0;
+}
+.sidebar-links li {
+  margin-bottom: 15px;
+}
+.sidebar-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 18px;
+}

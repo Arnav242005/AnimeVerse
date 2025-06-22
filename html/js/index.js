@@ -14,3 +14,11 @@
         prevEl: ".swiper-button-prev",
       },
     });
+
+document.querySelectorAll(".categorybtn").forEach(btn => {
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    const category = this.getAttribute("data-category");
+    window.location.href = `products.html?category=${encodeURIComponent(category)}`;
+  });
+});
