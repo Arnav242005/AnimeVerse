@@ -111,7 +111,7 @@ nav img{
 }
 
 .twoinput input[type="text"]{
-  width: 200px;
+  width: 215px;
   padding: 5px;
   text-align: center;
   font-weight: bold;
@@ -130,7 +130,7 @@ nav img{
 .threeinput input[type="text"]{
   width: 448px;
   margin-left: 5%;
-  padding: 5px 0px;
+  padding: 30px 0px;
   text-align: center;
   font-size: 15px;
   font-weight: bold;
