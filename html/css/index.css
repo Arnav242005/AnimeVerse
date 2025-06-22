@@ -230,7 +230,7 @@ nav img{
 .katanacategory .checknow{
   border: 1px solid black;
   padding: 5px;
-  font-family: Alumni+Sans+SC;
+  font-family: ital;
 }
 
 .katanacategory .checknow:hover{
@@ -241,7 +241,7 @@ nav img{
 
 .katanacategory .item{
   padding-top: 8px;
-  font-size: Alumni+Sans+SC;
+  font-size: ital;
 }
 
 .secondhero{
