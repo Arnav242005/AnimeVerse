@@ -116,7 +116,7 @@ nav img{
 }
 
 .product-container{
-  height: 100vh;
+  height: auto;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -125,20 +125,55 @@ nav img{
 }
 
 .product-card{
-  height: 300px;
+  height: auto;
   width: 300px;
   padding: 20px;
+  border: 1px solid black;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
 }
 
 .product-container img{
   height: auto;
   width: 100%;
+  border-radius: 8px;
+}
+
+.product-card h3{
+  font-family:'Times New Roman', Times, serif;
+}
+
+.product-card .main-p{
+  margin-top: 2px;
+  margin-bottom: 0px;
+  font-family: ital;
+  font-size: 15px;
+}
+
+.product-card .other-p{
+  margin-bottom: 3px;
+}
+
+.product-card .Addtocart{
+  margin-top: 3px;
+  padding: 5px;
+  text-align: center;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  font-size: 15px;
+}
+
+.product-card .Addtocart:hover{
+  background-color: black;
+  color: white;
+  transition: all 0.4s ease;
 }
 
 #sidebar {
   position: fixed;
   top: 0;
-  left: -300px; /* Hidden off screen */
+  left: -300px;
   width: 280px;
   height: 100%;
   background: white;
@@ -148,25 +183,21 @@ nav img{
   padding: 20px;
 }
 
-/* Show sidebar */
 #sidebar.active {
   left: 0;
 }
 
-/* Sidebar header */
 .sidebar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Close icon */
 #close-sidebar {
   font-size: 24px;
   cursor: pointer;
 }
 
-/* Hamburger icon */
 #hamburger {
   cursor: pointer;
   font-size: 24px;
@@ -174,17 +205,31 @@ nav img{
   z-index: 1000;
 }
 
-/* Sidebar links */
 .sidebar-links {
   list-style: none;
-  padding: 20px 0 0 0;
+  padding: 0px 0 0 0;
 }
+
 .sidebar-links li {
-  margin-bottom: 15px;
+  margin-bottom: 4px;
 }
+
 .sidebar-links a {
   text-decoration: none;
   color: #333;
   font-weight: 600;
   font-size: 18px;
+}
+
+.sidebar-header .shopby{
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.sidebar-links button{
+  border: none;
+  text-align: center;
+  font-size: 18px;
+  font-family: ital;
+  background-color: white;
 }
