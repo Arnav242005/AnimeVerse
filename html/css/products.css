@@ -222,14 +222,95 @@ nav img{
 }
 
 .sidebar-header .shopby{
-  font-size: 20px;
+  font-size: 23px;
   font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
 }
 
 .sidebar-links button{
   border: none;
   text-align: center;
   font-size: 18px;
+  font-weight: 100;
   font-family: ital;
   background-color: white;
+}
+
+.sidebar-links button:hover{
+  text-decoration: underline;
+}
+
+.footmain{
+  height: 40vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  clear: both;
+}
+
+.footmain .foot{
+  height: 30vh;
+  width: 30%;
+}
+
+.footmain .footmainfirst{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin-left: 30px;;
+}
+
+.footmain .footmainsecond{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.footmain .footmainthird{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.footmain .footh3{
+  font-size:medium;
+  font-weight: 500px;
+  margin-bottom: 10px;
+}
+
+.footmainfirst .footh3desc{
+  font-size: 14px;
+}
+
+.footmain a{
+  text-decoration: none;
+  color: black;
+  font-family: itell;
+}
+
+.footbody{
+  height: 2vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 8px;
+}
+
+.footend{
+  display: flex;
+  justify-content: center;
+}
+
+.footend img{
+  width: 150px;
+  height: 100px;
 }

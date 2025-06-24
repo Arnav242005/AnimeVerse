@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Naruto Pendant",
+    "category": "Pendant",
+    "anime": "Naruto",
+    "price": "$10",
+    "image": "images/naruto.jpg"
+  },
+  {
+    "name": "Luffy Hat",
+    "category": "Hat",
+    "anime": "One Piece",
+    "price": "$12",
+    "image": "images/ONEPIECE.jpg"
+  },
+  {
+    "name": "Gojo Shirt",
+    "category": "TShirts",
+    "anime": "Jujutsu Kaisen",
+    "price": "$15",
+    "image": "images/gojo.jpg"
+  }
+]

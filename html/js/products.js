@@ -1,15 +1,7 @@
-// Sample product list
-const products = [
-  { name: "Naruto Pendant", category: "Pendant", anime: "Naruto", price: "$10", image: "img/naruto.jpg" },
-  { name: "Luffy Hat", category: "Hat", anime: "One Piece", price: "$12", image: "images/ONEPIECE.jpg" },
-  { name: "Gojo Shirt", category: "TShirts", anime: "Jujutsu Kaisen", price: "$15", image: "img/gojo.jpg" }
-];
-
-// Global filters
+let products = [];
 let currentCategory = null;
 let currentAnime = null;
 
-// Read URL filters if present
 const urlParams = new URLSearchParams(window.location.search);
 if (urlParams.get("category")) {
   currentCategory = urlParams.get("category");
@@ -18,7 +10,6 @@ if (urlParams.get("anime")) {
   currentAnime = urlParams.get("anime");
 }
 
-// Render products based on current filters
 function displayProducts() {
   const container = document.querySelector(".product-container");
   container.innerHTML = "";
@@ -51,7 +42,6 @@ function displayProducts() {
   });
 }
 
-// Handle filter button clicks
 document.querySelectorAll(".filter-btn").forEach(button => {
   button.addEventListener("click", () => {
     const type = button.getAttribute("data-type");
@@ -59,17 +49,16 @@ document.querySelectorAll(".filter-btn").forEach(button => {
 
     if (type === "category") {
       currentCategory = value;
-      currentAnime = null; // Clear anime filter
+      currentAnime = null;
     } else if (type === "anime") {
       currentAnime = value;
-      currentCategory = null; // Clear category filter
+      currentCategory = null;
     }
 
     displayProducts();
   });
 });
 
-// Sidebar toggle logic
 const hamburger = document.getElementById("hamburger");
 const sidebar = document.getElementById("sidebar");
 const closeSidebar = document.getElementById("close-sidebar");
@@ -82,5 +71,15 @@ closeSidebar.addEventListener("click", () => {
   sidebar.classList.remove("active");
 });
 
-// Initial display on page load
-window.onload = displayProducts;
+window.onload = () => {
+  fetch("data/productdata.json")
+    .then(res => res.json())
+    .then(data => {
+      products = data;
+      displayProducts();
+    })
+    .catch(err => {
+      console.error("Error loading products:", err);
+      document.querySelector(".product-container").innerHTML = "<p>Error loading products.</p>";
+    });
+};
