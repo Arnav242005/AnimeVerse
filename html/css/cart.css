@@ -83,6 +83,12 @@ nav img{
   width: 210px;
 }
 
+.nav-items .cart{
+    font-weight: bold;
+    font-size: large;
+    margin-left: 10px;
+}
+
 .main-text{
     height: 15vh;
     width: 100%;

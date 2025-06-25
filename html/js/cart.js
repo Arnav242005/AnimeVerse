@@ -29,3 +29,14 @@ function renderCart() {
 }
 
 renderCart();
+
+document.querySelector(".clear-cart").addEventListener("click", () => {
+  sessionStorage.removeItem("cart");
+
+  // Optional: show confirmation or toast here
+  renderCart(); // Re-render the cart after clearing
+
+  // Update cart count in navbar
+  const countElement = document.getElementById("cart-count");
+  if (countElement) countElement.textContent = "0";
+});
