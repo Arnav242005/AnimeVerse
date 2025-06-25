@@ -29,6 +29,7 @@ function displayProducts() {
   }
 
   filtered.forEach(p => {
+    const productStr = encodeURIComponent(JSON.stringify(p));
     container.innerHTML += `
       <div class="product-card">
         <img src="${p.image}" alt="${p.name}">
@@ -36,10 +37,33 @@ function displayProducts() {
         <h3>${p.name}</h3>
         <p class="other-p">${p.anime} | ${p.category}</p>
         <p class="other-p">${p.price}</p>
-        <button class="Addtocart">Add To Cart</button>
+        <button class="Addtocart" data-product="${productStr}">Add To Cart</button>
       </div>
     `;
   });
+}
+
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("Addtocart")) {
+    const productStr = decodeURIComponent(e.target.getAttribute("data-product"));
+    const product = JSON.parse(productStr);
+
+    let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+    cart.push(product);
+    sessionStorage.setItem("cart", JSON.stringify(cart));
+
+    updateCartCount(); // Optional: to update cart icon
+    // window.location.href = "cart.html"; // Optional: redirect to cart
+  }
+});
+
+//Update cart count in navbar
+function updateCartCount() {
+  const cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+  const countElement = document.getElementById("cart-count");
+  if (countElement) {
+    countElement.textContent = cart.length;
+  }
 }
 
 document.querySelectorAll(".filter-btn").forEach(button => {
@@ -77,6 +101,7 @@ window.onload = () => {
     .then(data => {
       products = data;
       displayProducts();
+      updateCartCount();
     })
     .catch(err => {
       console.error("Error loading products:", err);
