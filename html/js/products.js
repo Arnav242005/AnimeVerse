@@ -54,6 +54,12 @@ document.addEventListener("click", (e) => {
 
     updateCartCount(); // Optional: to update cart icon
     // window.location.href = "cart.html"; // Optional: redirect to cart
+    document.getElementById("modalBodyContent").textContent =
+      `"${product.name}" has been added to your cart!`;
+
+    // Show Bootstrap modal manually
+    const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+    modal.show();
   }
 });
 
