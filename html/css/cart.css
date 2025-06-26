@@ -273,6 +273,14 @@ nav img{
   justify-content: center;
 }
 
+.footmainsecond a{
+  margin-bottom: 3px;
+}
+
+.footmainthird a{
+  padding-bottom: 3px;
+}
+
 .footmain .footh3{
   font-size:medium;
   font-weight: 500px;
