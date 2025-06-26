@@ -216,6 +216,23 @@ nav img{
   font-size: 15px;
 }
 
+.quantitymain{
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.quantitymain .quantitytext{
+  font-family: ital;
+  font-weight: 400;
+}
+
+.quantitymain input[type="number"]{
+  text-align: center;
+  width: 40px;
+}
+
 .last{
   width: 100%;
   height: auto;

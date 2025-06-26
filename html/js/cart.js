@@ -32,6 +32,10 @@ function renderCart() {
         <p class="instock">In Stock</p>
         <p class="pitchp">Limited Time Offer</p>
         <p class="cashback">Cashback Available on Net Banking</p>
+        <div class="quantitymain">
+          <p class="quantitytext">Quantity:</p>
+          <input type="number" name="quantity" value="1" min="1" max="10" step="1" required>
+        </div>
       </div>
     `;
 
