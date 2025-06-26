@@ -11,7 +11,7 @@ function renderCart() {
 
   // If empty
   if (cart.length === 0) {
-    cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+    cartContainer.innerHTML = `<p class="emptycart">Your cart is empty.</p>`;
     return;
   }
 
@@ -27,6 +27,11 @@ function renderCart() {
         <p>${item.anime} | ${item.category}</p>
         <p>${item.price}</p>
         <button class="removeitem" data-index="${index}">Remove</button>
+      </div>
+      <div class="pitch">
+        <p class="instock">In Stock</p>
+        <p class="pitchp">Limited Time Offer</p>
+        <p class="cashback">Cashback Available on Net Banking</p>
       </div>
     `;
 
