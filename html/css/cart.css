@@ -84,22 +84,70 @@ nav img{
 }
 
 .nav-items .cart{
-    font-weight: bold;
-    font-size: large;
-    margin-left: 10px;
+  font-weight: bold;
+  font-size: large;
+  margin-left: 10px;
 }
 
 .main-text{
-    height: 15vh;
-    width: 100%;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-text .yourcart{
-    font-size: 30px;
-    font-family: ital;
-    font-weight: 400;
+  font-size: 30px;
+  font-family: ital;
+  font-weight: 400;
+}
+
+.cart-container{
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.cart-item{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 18px 10px;
+  padding: 20px 14px;
+  border: 1px solid black;
+  border-radius: 12px;
+  box-shadow: 4px 4px 20px -2px grey;
+}
+
+.cart-item img{
+ width: 70%;
+ border-radius: 12px;
+ box-shadow: 4px 4px 20px -2px grey;
+ margin-left: 10px;
+}
+
+.cart-info{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cart-info p{
+  font-family: ital;
+  font-weight: 400;
+}
+
+.cart-info .removeitem{
+  height: 30px;
+  width: 90px;
+  background-color: white;
+  color: color;
+}
+
+.cart-info .removeitem:hover{
+  background-color: black;
+  color: white;
+  transform: all 0.4s ease;
 }

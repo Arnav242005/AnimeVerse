@@ -6,12 +6,17 @@ function renderCart() {
   const countElement = document.getElementById("cart-count");
   if (countElement) countElement.textContent = cart.length;
 
+  // Clear old content
+  cartContainer.innerHTML = "";
+
+  // If empty
   if (cart.length === 0) {
     cartContainer.innerHTML = "<p>Your cart is empty.</p>";
     return;
   }
 
-  cart.forEach(item => {
+  // Render items
+  cart.forEach((item, index) => {
     const card = document.createElement("div");
     card.classList.add("cart-item");
 
@@ -21,22 +26,34 @@ function renderCart() {
         <h3>${item.name}</h3>
         <p>${item.anime} | ${item.category}</p>
         <p>${item.price}</p>
+        <button class="removeitem" data-index="${index}">Remove</button>
       </div>
     `;
 
     cartContainer.appendChild(card);
   });
+
+  // Bind Remove buttons after rendering
+  document.querySelectorAll(".removeitem").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      const removeIndex = parseInt(e.target.getAttribute("data-index"));
+      let updatedCart = JSON.parse(sessionStorage.getItem("cart")) || [];
+      updatedCart.splice(removeIndex, 1); // remove the item
+      sessionStorage.setItem("cart", JSON.stringify(updatedCart));
+      renderCart(); // re-render after removal
+    });
+  });
 }
 
-renderCart();
+// Empty Cart button handler
+document.addEventListener("DOMContentLoaded", () => {
+  renderCart(); // Initial render
 
-document.querySelector(".clear-cart").addEventListener("click", () => {
-  sessionStorage.removeItem("cart");
+  document.querySelector(".clear-cart").addEventListener("click", () => {
+    sessionStorage.removeItem("cart");
+    renderCart();
 
-  // Optional: show confirmation or toast here
-  renderCart(); // Re-render the cart after clearing
-
-  // Update cart count in navbar
-  const countElement = document.getElementById("cart-count");
-  if (countElement) countElement.textContent = "0";
+    const countElement = document.getElementById("cart-count");
+    if (countElement) countElement.textContent = "0";
+  });
 });
