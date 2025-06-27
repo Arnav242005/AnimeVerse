@@ -4,20 +4,41 @@
     "category": "Pendant",
     "anime": "Naruto",
     "price": "Rs 150",
-    "image": "images/naruto.jpg"
+    "image": "images/narutop.webp"
   },
   {
     "name": "Luffy Hat",
     "category": "Hat",
     "anime": "One Piece",
     "price": "Rs 200",
-    "image": "images/ONEPIECE.jpg"
+    "image": "images/strawhat.jpg"
   },
   {
     "name": "Gojo Shirt",
     "category": "TShirts",
     "anime": "Jujutsu Kaisen",
     "price": "Rs 450",
-    "image": "images/gojo.jpg"
+    "image": "images/gojot.jpeg"
+  },
+  {
+    "name": "Straw-Hat Logo",
+    "category": "Pendant",
+    "anime" : "One Piece",
+    "price" : "Rs 210",
+    "image" : "images/Luffy1Pendant.jpg"
+  },
+  {
+    "name": "Chopper Pendant",
+    "category": "Pendant",
+    "anime" :"One Piece",
+    "price": "Rs 180",
+    "image" :"images/chopperpendant.jpeg"
+  },
+  {
+    "name": "Devil Fruits",
+    "category" :"Pendant",
+    "anime":"One Piece",
+    "price":"Rs 300",
+    "image":"images/devilfruitp.jpg"
   }
 ]
