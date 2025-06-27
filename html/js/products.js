@@ -1,6 +1,8 @@
 let products = [];
 let currentCategory = null;
 let currentAnime = null;
+let currentPage = 1;
+const itemsPerPage = 15;
 
 const urlParams = new URLSearchParams(window.location.search);
 if (urlParams.get("category")) {
@@ -23,12 +25,22 @@ function displayProducts() {
     filtered = filtered.filter(p => p.anime.toLowerCase() === currentAnime.toLowerCase());
   }
 
+  const totalItems = filtered.length;
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+
   if (filtered.length === 0) {
     container.innerHTML = "<p>No products found.</p>";
+    document.getElementById("pagination").innerHTML = "";
     return;
   }
 
-  filtered.forEach(p => {
+  // Slice the data for current page
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const paginatedItems = filtered.slice(start, end);
+
+  // Render the paginated products
+  paginatedItems.forEach(p => {
     const productStr = encodeURIComponent(JSON.stringify(p));
     container.innerHTML += `
       <div class="product-card">
@@ -41,7 +53,30 @@ function displayProducts() {
       </div>
     `;
   });
+
+  // Render pagination
+  renderPagination(totalPages);
 }
+
+function renderPagination(totalPages) {
+  const paginationContainer = document.getElementById("pagination");
+  paginationContainer.innerHTML = "";
+
+  for (let i = 1; i <= totalPages; i++) {
+    const btn = document.createElement("button");
+    btn.textContent = i;
+    btn.classList.add("pagination-btn");
+    if (i === currentPage) btn.classList.add("active");
+
+    btn.addEventListener("click", () => {
+      currentPage = i;
+      displayProducts();
+    });
+
+    paginationContainer.appendChild(btn);
+  }
+}
+
 
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("Addtocart")) {
@@ -84,7 +119,7 @@ document.querySelectorAll(".filter-btn").forEach(button => {
       currentAnime = value;
       currentCategory = null;
     }
-
+    currentPage = 1;
     displayProducts();
   });
 });

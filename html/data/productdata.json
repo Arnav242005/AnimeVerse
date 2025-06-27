@@ -40,5 +40,71 @@
     "anime":"One Piece",
     "price":"Rs 300",
     "image":"images/devilfruitp.jpg"
+  },
+  {
+    "name":"Sukuna Tshirt",
+    "category":"TShirts",
+    "anime":"Jujutsu Kaisen",
+    "price":"Rs 550",
+    "image": "images/sukunat.jpeg"
+  },
+  {
+    "name":"Itadori TShirt",
+    "category":"TShirts",
+    "anime":"Jujutsu Kaisen",
+    "price":"Rs 450",
+    "image":"images/itadorit.jpeg"
+  },
+  {
+    "name":"Kenjaku Tshirt",
+    "category":"TShirts",
+    "anime":"Jujutsu Kaisen",
+    "price":"Rs 500",
+    "image":"images/kenjakut.jpg"
+  },
+  {
+    "name":"Toji Tshirt",
+    "category":"TShirts",
+    "anime":"Jujutsu Kaisen",
+    "price":"Rs 500",
+    "image":"images/tojit.jpg"
+  },
+  {
+    "name":"Zoro TShirt",
+    "category":"TShirts",
+    "anime":"One Piece",
+    "price":"Rs 440",
+    "image":"images/zorot.jpg"
+  },
+  {
+    "name":"Gear 4 Luffy",
+    "category":"TShirts",
+    "anime":"One Piece",
+    "price":"Rs 490",
+    "image":"images/luffyt.webp"
+  },
+  {
+    "name":"Trafalgar Law Shirt",
+    "category":"TShirts",
+    "anime":"One Piece",
+    "price":"Rs 400",
+    "image":"images/lawt.jpeg"
+  },
+  {
+    "name":"Luffy TShirt",
+    "category":"TShirts",
+    "anime":"One Piece",
+    "price":"Rs 499",
+    "image":"images/luffy1t.jpg"
+  },
+  {
+    "name":"Nika TShirt",
+    "category":"TShirts",
+    "anime":"One Piece",
+    "price":"Rs 500",
+    "image":"images/nikat.png"
+  },
+  {
+    "name":""
   }
 ]
