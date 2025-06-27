@@ -105,6 +105,185 @@
     "image":"images/nikat.png"
   },
   {
-    "name":""
+    "name":"Naruto Tshirt",
+    "category":"TShirts",
+    "anime":"Naruto",
+    "price":"Rs 499",
+    "image":"images/narutot.jpg"
+  },
+  {
+    "name":"Itachi Uchiha",
+    "category":"TShirts",
+    "anime":"Naruto",
+    "price":"Rs 499",
+    "image":"images/itachit.jpg"
+  },
+  {
+    "name":"Sasuke Uchiha",
+    "category":"TShirts",
+    "anime":"Naruto",
+    "price":"Rs 520",
+    "image":"images/sasuket.jpeg"
+  },
+  {
+    "name":"Akatsuki",
+    "category":"TShirts",
+    "anime":"Naruto",
+    "price":"Rs 550",
+    "image":"images/akatsukit.jpg"
+  },
+  {
+    "name":"Madara Tshirt",
+    "category":"TShirts",
+    "anime":"Naruto",
+    "price":"Rs 510",
+    "image":"images/madarat.jpg"
+  },
+  {
+    "name":"Toji Pendant",
+    "category":"Pendant",
+    "anime":"Jujutsu Kaisen",
+    "price":"Rs 130",
+    "image":"images/tojip.webp"
+  },
+  {
+    "name":"Daggers",
+    "category":"Pendant",
+    "anime":"Naruto",
+    "price":"Rs 200",
+    "image":"images/narutopshurikens.jpg"
+  },
+  {
+    "name":"Sukuna Pendant",
+    "category":"Pendant",
+    "anime":"Jujutsu Kaisen",
+    "price":"Rs 220",
+    "image":"images/sukunap.webp"
+  },
+  {
+    "name":"",
+    "category":"",
+    "anime":"",
+    "price":"",
+    "image":""
+  },
+  {
+    "name":"",
+    "category":"",
+    "anime":"",
+    "price":"",
+    "image":""
+  },
+  {
+    "name":"",
+    "category":"",
+    "anime":"",
+    "price":"",
+    "image":""
+  },
+  {
+    "name":"",
+    "category":"",
+    "anime":"",
+    "price":"",
+    "image":""
+  },
+  {
+    "name":"",
+    "category":"",
+    "anime":"",
+    "price":"",
+    "image":""
+  },
+  {
+    "name":"",
+    "category":"",
+    "anime":"",
+    "price":"",
+    "image":""
+  },
+  {
+    "name":"",
+    "category":"",
+    "anime":"",
+    "price":"",
+    "image":""
+  },
+  {
+    "name":"",
+    "category":"",
+    "anime":"",
+    "price":"",
+    "image":""
+  },
+  {
+    "name":"",
+    "category":"",
+    "anime":"",
+    "price":"",
+    "image":""
+  },
+  {
+    "name":"",
+    "category":"",
+    "anime":"",
+    "price":"",
+    "image":""
+  },
+  {
+    "name":"",
+    "category":"",
+    "anime":"",
+    "price":"",
+    "image":""
+  },
+  {
+    "name":"",
+    "category":"",
+    "anime":"",
+    "price":"",
+    "image":""
+  },
+  {
+    "name":"",
+    "category":"",
+    "anime":"",
+    "price":"",
+    "image":""
+  },
+  {
+    "name":"",
+    "category":"",
+    "anime":"",
+    "price":"",
+    "image":""
+  },
+  {
+    "name":"",
+    "category":"",
+    "anime":"",
+    "price":"",
+    "image":""
+  },
+  {
+    "name":"",
+    "category":"",
+    "anime":"",
+    "price":"",
+    "image":""
+  },
+  {
+    "name":"",
+    "category":"",
+    "anime":"",
+    "price":"",
+    "image":""
+  },
+  {
+    "name":"",
+    "category":"",
+    "anime":"",
+    "price":"",
+    "image":""
   }
 ]
