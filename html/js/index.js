@@ -15,6 +15,29 @@
       },
     });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const logoutBtn = document.querySelector(".logout-btn");
+
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", function () {
+      let username = getCookie("username");
+      document.cookie = `username=${username}; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+      alert("Logout Successful");
+    });
+  } else {
+    console.warn("No element with class 'logout_btn' found.");
+  }
+});
+
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  
+  if (parts.length === 2) return parts.pop().split(';').shift();
+  
+  return null;
+}
+
 document.querySelectorAll(".categorybtn").forEach(btn => {
   btn.addEventListener("click", function (e) {
     e.preventDefault();

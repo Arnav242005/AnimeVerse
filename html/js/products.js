@@ -77,9 +77,21 @@ function renderPagination(totalPages) {
   }
 }
 
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    
+    if (parts.length === 2) return parts.pop().split(';').shift();
+    
+    return null;
+}
 
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("Addtocart")) {
+    let user = getCookie("username");
+    console.log(user);
+    
+    if(user){
     const productStr = decodeURIComponent(e.target.getAttribute("data-product"));
     const product = JSON.parse(productStr);
 
@@ -94,6 +106,11 @@ document.addEventListener("click", (e) => {
     // Show Bootstrap modal manually
     const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
     modal.show();
+    }else{
+      alert("You need to Login First");
+      window.location.href="login.html";
+    }
+
   }
 });
 
