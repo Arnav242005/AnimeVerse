@@ -218,11 +218,12 @@ nav img{
 }
 
 .katanacategory{
-    height: auto;
-    padding: 20px;
-    width: calc(25% - 20px);
-    display: inline-block;
-    background-color: whitesmoke;
+  height: auto;
+  padding: 20px;
+  width: calc(25% - 20px);
+  margin: 5px;
+  display: inline-block;
+  background-color: whitesmoke;
 }
 
 .katanacategory .checknow{
