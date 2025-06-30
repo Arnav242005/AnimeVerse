@@ -87,8 +87,7 @@ document.addEventListener("click", (e) => {
     cart.push(product);
     sessionStorage.setItem("cart", JSON.stringify(cart));
 
-    updateCartCount(); // Optional: to update cart icon
-    // window.location.href = "cart.html"; // Optional: redirect to cart
+    updateCartCount();
     document.getElementById("modalBodyContent").textContent =
       `"${product.name}" has been added to your cart!`;
 

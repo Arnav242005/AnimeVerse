@@ -148,6 +148,8 @@ nav img{
 .cardimgwrapper{
   position: relative;
   overflow: hidden;
+  height: 200px;
+  width: 250px;
 }
 
 .cardimgwrapper img{
