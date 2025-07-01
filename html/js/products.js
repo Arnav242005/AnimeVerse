@@ -1,6 +1,7 @@
 let products = [];
 let currentCategory = null;
 let currentAnime = null;
+let allprod = null;
 let currentPage = 1;
 const itemsPerPage = 15;
 
@@ -10,6 +11,10 @@ if (urlParams.get("category")) {
 }
 if (urlParams.get("anime")) {
   currentAnime = urlParams.get("anime");
+}
+
+if(urlParams.get("allprods")){
+  allprod = urlParams.get("allprods");
 }
 
 function displayProducts() {

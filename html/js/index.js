@@ -38,6 +38,12 @@ function getCookie(name) {
   return null;
 }
 
+document.querySelector(".allbtn").addEventListener("click",function(e){
+  e.preventDefault();
+  const allprods = this.getAttribute("data-all");
+  window.location.href=`products.html?allprods=${encodeURIComponent(allprods)}`;
+})
+
 document.querySelectorAll(".categorybtn").forEach(btn => {
   btn.addEventListener("click", function (e) {
     e.preventDefault();
